@@ -1,0 +1,9 @@
+{
+  "ip": "192.168.200.101",
+  "port": 8181,
+  "username": "admin",
+  "password": "admin",
+  "endpoints": {
+    "topology": "/restconf/operational/network-topology:network-topology"
+  }
+}

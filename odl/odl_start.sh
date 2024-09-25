@@ -1,0 +1,1 @@
+echo "feature:install odl-dlux-all odl-l2switch-all odl-mdsal-all odl-netconf-all odl-restconf-all odl-openflowplugin-all" | ./odl/bin/karaf
