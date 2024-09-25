@@ -1,0 +1,10 @@
+version: '3'
+services:
+  iraas_client:
+    image: iraas_clinet
+    container_name: iraas_client
+    network_mode: host
+    restart: no
+    deploy:
+      restart_policy:
+        condition: none

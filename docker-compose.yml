@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  service1:
+    build:
+      context: ./server/dockerfile  
+      dockerfile: dockerfile          
+    ports:
+      - "5001:5001"
+    network_mode: host                  # Use host networking
+    restart: no                         # Do not restart
+    container_name: iRaaS_Server             
+
+  service2:
+    build:
+      context: ./client/dockerfile
+      dockerfile: dockerfile
+    ports:
+      - "5002:5002"
+    network_mode: host                  # Use host networking
+    restart: no                         # Do not restart
+    container_name: iRaaS_Client            
+
+  service3:
+    build:
+      context: ./mon/dockerfile
+      dockerfile: dockerfile           
+    ports:
+      - "5003:5003"
+    network_mode: host                  # Use host networking
+    restart: no                         # Do not restart
+    container_name: iRaaS_Mon            
